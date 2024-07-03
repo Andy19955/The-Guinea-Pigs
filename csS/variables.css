@@ -7,4 +7,8 @@
   --black: #000;
   --primary-lgt: #fcba70;
   --primary-drk: #f7a64a;
+  --error-bd: #ff0000;
+  --error-bg: #ffc0cb;
+  --success-bd: #00ff00;
+  --success-bg: #90ee90;
 }

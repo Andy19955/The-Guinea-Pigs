@@ -251,6 +251,28 @@ li::marker {
   background-color: var(--primary-lgt);
 }
 
+/* Messages */
+.message-container {
+  margin: 15px 0;
+}
+
+.message {
+  margin: 0 auto;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.error {
+  border: 1px solid var(--error-bd);
+  background-color: var(--error-bg);
+}
+
+.success {
+  border: 1px solid var(--success-bd);
+  background: var(--success-bg);
+}
+
 /* Form */
 .form-group {
   gap: 5px;
@@ -370,13 +392,14 @@ li::marker {
 
 @media screen and (max-width: 991px) {
   .navigation-collapsable {
-    background-color: var(--white);
+    background-color: var(--black);
     width: 100%;
     display: none;
     position: absolute;
     top: 60px;
     left: 0;
     border-top: 1px solid var(--grey-drk);
+    padding: 0 0 25px 0;
   }
 
   .navigation-horizontal {

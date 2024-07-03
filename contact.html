@@ -63,59 +63,25 @@
             <div class="form-group flex">
               <div>
                 <label for="subject">Subject</label>
-                <small>(min. 15 characters)</small>
+                <small>(min. 16 characters)</small>
               </div>
               <input type="text" class="form-input" id="subject" name="subject" placeholder="Where do you buy equipment?" required />
             </div>
             <div class="form-group flex">
               <div>
                 <label for="message">Your message</label>
-                <small>(min. 25 characters)</small>
+                <small>(min. 26 characters)</small>
               </div>
               <textarea id="message" class="form-input" rows="10" placeholder="Can you please add more information about where you are buying the equipment for the guinea pigs?" required></textarea>
             </div>
+            <div class="message-container"></div>
             <div class="center">
-              <button type="submit" id="send-msg-btn" class="btn btn-lrg primary-btn">Send message</button>
+              <button type="submit" id="send-btn" class="btn btn-lrg primary-btn">Send message</button>
             </div>
           </form>
         </div>
       </section>
     </main>
     <footer class="main-footer">&copy; 2024 - The Guinea Pigs</footer>
-    <script>
-      // Slideshow script
-      let slideIndex = 1;
-      showSlides(slideIndex);
-
-      // Next / previous controls
-      function plusSlides(n) {
-        showSlides((slideIndex += n));
-      }
-
-      // Thumbnail image controls
-      function currentSlide(n) {
-        showSlides((slideIndex = n));
-      }
-
-      function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("carousel-slides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-          slideIndex = 1;
-        }
-        if (n < 1) {
-          slideIndex = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" img-active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " img-active";
-      }
-    </script>
   </body>
 </html>

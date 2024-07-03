@@ -1,4 +1,5 @@
-import { toggleNavigation } from "./ui/toggleNavbar.js";
+import { toggleNavigation } from "./ui/shared/toggleNavbar.js";
+import { handleContactForm } from "./handlers/handleContactForm.js";
 
 function router() {
   const { pathname } = location;
@@ -8,6 +9,8 @@ function router() {
     case "/index.html":
       console.log("index");
       break;
+    case "/contact.html":
+      handleContactForm();
   }
 }
 
