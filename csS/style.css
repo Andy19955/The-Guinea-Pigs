@@ -32,7 +32,8 @@ a {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 p {
@@ -60,6 +61,12 @@ li::marker {
   flex-direction: row;
   gap: 30px;
   align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
 }
 
 .center {
@@ -137,9 +144,7 @@ li::marker {
   color: var(--grey-lgtr);
 }
 
-.s-latest,
-.s-benefits,
-.s-about {
+.section-wrapper {
   max-width: 1280px;
   margin: 50px auto;
   padding: 0 30px;
@@ -214,7 +219,50 @@ li::marker {
 
 .card-body {
   padding: 20px 0;
-  font-size: 18px;
+}
+
+.card-title {
+  font-size: 20px;
+}
+
+.banner-container {
+  gap: 30px;
+}
+
+.banner {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  transition: 0.15s ease;
+  cursor: pointer;
+}
+
+.banner:hover {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.75);
+}
+
+.banner-title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.banner-content {
+  flex: 1;
+}
+
+.banner-img {
+  width: 100%;
+  border-radius: 10px 0 0 10px;
+  object-fit: cover;
+}
+
+.banner-inner {
+  height: 100%;
+  padding: 30px;
+  gap: 15px;
+  justify-content: space-between;
 }
 
 /* .s-featured {
@@ -227,6 +275,7 @@ li::marker {
   border: none;
   font-size: 16px;
   font-weight: bold;
+  display: inline-block;
   color: var(--grey-drkr);
   cursor: pointer;
   border-radius: 5px;
