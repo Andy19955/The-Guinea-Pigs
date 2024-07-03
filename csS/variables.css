@@ -1,7 +1,10 @@
 :root {
-  --light-grey: #eee;
-  --dark-grey: #232323;
+  --grey-lgtr: #f2f2f2;
+  --grey-lgt: #bbb;
+  --grey-drk: #777;
+  --grey-drkr: #232323;
   --white: #fff;
-  --active-link: #ddd;
   --black: #000;
+  --primary-lgt: #fcba70;
+  --primary-drk: #f7a64a;
 }

@@ -19,17 +19,17 @@
         </div>
         <div class="navigation-collapsable" id="navigation-collapsable">
           <ul class="navigation navigation-horizontal">
-            <li class="active">
-              <a class="navigation-link" href="/">Home</a>
+            <li>
+              <a href="/" class="navigation-link active">Home</a>
             </li>
             <li>
-              <a class="navigation-link" href="#">Blog</a>
+              <a href="./blog.html" class="navigation-link">Blog</a>
             </li>
             <li>
-              <a class="navigation-link" href="#">About</a>
+              <a href="./about.html" class="navigation-link">About</a>
             </li>
             <li>
-              <a class="navigation-link" href="#">Contact</a>
+              <a href="./contact.html" class="navigation-link">Contact</a>
             </li>
           </ul>
         </div>
@@ -39,10 +39,163 @@
       </nav>
     </header>
     <main>
-      <section>Hero</section>
-      <section>Information</section>
-      <section>Carousel slider with latest posts</section>
+      <section class="s-hero">
+        <h1>A blog about the life of two guinea pigs</h1>
+      </section>
+      <section class="s-latest">
+        <div class="slider-container">
+          <div class="slider-header">
+            <div class="section-title">
+              <h2>Latest posts</h2>
+            </div>
+            <div class="slider-controls">
+              <i id="prev" class="fa fa-chevron-left"></i>
+              <i id="next" class="fa fa-chevron-right"></i>
+            </div>
+          </div>
+          <div class="slider-elements">
+            <div id="slider-1" class="card">
+              <div class="card-header">
+                <img src="https://images.unsplash.com/photo-1719230693490-786d994f72b2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+              </div>
+              <div class="card-body">
+                <h3>A new adventure at the cabin</h3>
+              </div>
+            </div>
+            <div id="slider-2" class="card">
+              <div class="card-header">
+                <img src="https://images.unsplash.com/photo-1718743489190-1247db9f5305?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+              </div>
+              <div class="card-body">
+                <h3>This is a test title with a pretty long title</h3>
+              </div>
+            </div>
+            <div id="slider-3" class="card">
+              <div class="card-header">
+                <img src="https://images.unsplash.com/photo-1719304247081-6647a664bc65?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+              </div>
+              <div class="card-body">
+                <h3>So it begins</h3>
+              </div>
+            </div>
+            <!-- <div id="slider-4" class="card">
+              <div class="card-header">
+                <img src="https://images.unsplash.com/photo-1719304247081-6647a664bc65?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+              </div>
+              <div class="card-body">
+                <h3>Test slide</h3>
+              </div>
+            </div>
+            <div id="slider-5" class="card">
+              <div class="card-header">
+                <img src="https://images.unsplash.com/photo-1718743489190-1247db9f5305?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+              </div>
+              <div class="card-body">
+                <h3>This is yet another test title with a pretty long title</h3>
+              </div>
+            </div> -->
+          </div>
+          <div class="slider-footer center">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+      </section>
+      <!-- <section class="s-featured">
+        <div class="carousel-container">
+          <div class="carousel-slides fade">
+            <div class="carousel-slide-number">1</div>
+            <img
+              src="https://images.unsplash.com/photo-1719230693490-786d994f72b2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              width="80%"
+            />
+            <div class="carousel-slide-caption">Beskrivelse</div>
+          </div>
+          <div class="carousel-slides fade">
+            <div class="carousel-slide-number">2</div>
+            <img
+              src="https://images.unsplash.com/photo-1718743489190-1247db9f5305?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              width="80%"
+            />
+            <div class="carousel-slide-caption">Beskrivelse</div>
+          </div>
+          <div class="carousel-slides fade">
+            <div class="carousel-slide-number">3</div>
+            <img
+              src="https://images.unsplash.com/photo-1719304247081-6647a664bc65?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              width="80%"
+            />
+            <div class="carousel-slide-caption">Beskrivelse</div>
+          </div>
+          <a class="carousel-prev" onclick="plusSlides(-1)"><i class="fa fa-chevron-left"></i></a>
+          <a class="carousel-next" onclick="plusSlides(1)"><i class="fa fa-chevron-right"></i></a>
+        </div>
+        <div class="carousel-indicator">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </section> -->
+      <section class="s-benefits">
+        <div class="section-content flex row">
+          <div>
+            <div class="section-title">
+              <h2>Why follow us?</h2>
+            </div>
+            <ul class="flex">
+              <li>Add extra cuteness to your day.</li>
+              <li>Get a break from reality by reading about our adventures.</li>
+              <li>If you have your own guinea pigs, maybe you can get som inspiration.</li>
+              <li>Lets connect to exchange experience, tips and tricks.</li>
+              <li>Did we mention that we are super cute?</li>
+            </ul>
+          </div>
+          <div>
+            <img
+              width="500px"
+              style="border-radius: 10px; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5)"
+              src="https://images.unsplash.com/photo-1619961443292-16f133daa0f2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            />
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="main-footer">&copy; 2024 - The Guinea Pigs</footer>
+    <script>
+      // Slideshow script
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next / previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("carousel-slides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" img-active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " img-active";
+      }
+    </script>
   </body>
 </html>
