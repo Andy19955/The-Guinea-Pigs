@@ -3,9 +3,9 @@ import { checkLength } from "../helpers/checkLength.js";
 import { validateEmail } from "../helpers/validateEmail.js";
 
 export function handleContactForm() {
-  const sendButton = document.querySelector("#send-btn");
+  const contactForm = document.querySelector("#contact-form");
 
-  sendButton.addEventListener("click", (event) => {
+  contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const name = document.querySelector("#name");
