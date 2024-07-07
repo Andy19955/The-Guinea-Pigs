@@ -1,5 +1,6 @@
 import { toggleNavigation } from "./ui/shared/toggleNavbar.js";
 import { handleContactForm } from "./handlers/handleContactForm.js";
+import { handlePostsDisplay } from "./handlers/handlePostsDisplay.js";
 
 function router() {
   const { pathname } = location;
@@ -7,10 +8,14 @@ function router() {
   switch (pathname) {
     case "/":
     case "/index.html":
-      console.log("index");
+      // Add api call
+      break;
+    case "/blog.html":
+      handlePostsDisplay();
       break;
     case "/contact.html":
       handleContactForm();
+      break;
   }
 }
 

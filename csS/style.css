@@ -73,6 +73,10 @@ li::marker {
   text-align: center;
 }
 
+.hidden {
+  display: none;
+}
+
 .decorated-link {
   font-weight: bold;
 }
@@ -440,6 +444,12 @@ li::marker {
   }
 }
 
+@media screen and (max-width: 1365px) {
+}
+
+@media screen and (max-width: 1199px) {
+}
+
 @media screen and (max-width: 991px) {
   .navigation-collapsable {
     background-color: var(--black);
@@ -475,7 +485,126 @@ li::marker {
     height: auto;
   }
 
+  .banner-inner {
+    padding: 15px;
+  }
+
   .banner-img {
     height: 300px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  @media screen and (max-width: 767px) {
+  }
+
+  @media screen and (max-width: 544px) {
   }
 }
+
+/* TEST START */
+.test-wrapper {
+  position: relative;
+}
+
+.test-wrapper i {
+  height: 50px;
+  width: 50px;
+  background: #fff;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  font-size: 1.25rem;
+  transform: translateY(-50%);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.test-wrapper i:first-child {
+  left: -22px;
+}
+
+.test-wrapper i:last-child {
+  right: -22px;
+}
+
+.test-wrapper .test-carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: 0;
+  padding: 10px 0;
+}
+
+.test-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.test-carousel .test-card {
+  list-style: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  scroll-snap-align: start;
+}
+
+.test-carousel .test-card .test-card-container {
+  transition: transform 0.2s ease;
+}
+
+.test-carousel .test-card:hover .test-card-container {
+  transform: scale(0.97);
+}
+
+.test-card .test-img {
+  border-radius: 5px;
+}
+
+.test-card .test-img img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.test-card h3 {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 20px 0 5px;
+}
+
+.test-carousel.test-dragging {
+  scroll-behavior: auto;
+  scroll-snap-type: none;
+}
+
+.test-carousel.test-dragging .test-card {
+  cursor: grabbing;
+  user-select: none;
+}
+
+i.inactive {
+  opacity: 0.3;
+  cursor: default;
+}
+
+@media screen and (max-width: 900px) {
+  .test-wrapper .test-carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .test-wrapper .test-carousel {
+    grid-auto-columns: 100%;
+  }
+}
+/* TEST END */

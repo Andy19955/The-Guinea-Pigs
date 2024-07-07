@@ -43,28 +43,31 @@
         <div class="page-title">
           <h1 class="center">Blog</h1>
         </div>
-        <div class="banner-container flex">
-          <div class="banner">
-            <div class="banner-content">
-              <img
-                class="banner-img"
-                src="https://images.unsplash.com/photo-1719230693490-786d994f72b2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
-            </div>
-            <div class="banner-content">
-              <div class="banner-inner flex">
-                <h2 class="banner-title">Test tittel med en litt lengre tittel som nå er enda lengre</h2>
-                <p class="banner-description">
-                  Dette er bare en liten test for å sjekke hvordan det fungerer å ha litt lengre tekst i banneret under tittelen sånn som det vanligvis kommer til å være når nettsiden er ferdig.
-                </p>
-                <div class="center">
+        <div id="loading-wrapper"><i class="fa fa-spinner fa-spin"></i> Loading posts...</div>
+        <div id="post-container" class="banner-container flex">
+          <a href="#">
+            <div class="banner">
+              <div class="banner-content">
+                <img
+                  class="banner-img"
+                  src="https://images.unsplash.com/photo-1719230693490-786d994f72b2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                />
+              </div>
+              <div class="banner-content">
+                <div class="banner-inner flex">
+                  <h2 class="banner-title">Test tittel med en litt lengre tittel som nå er enda lengre</h2>
+                  <p class="banner-description">
+                    Dette er bare en liten test for å sjekke hvordan det fungerer å ha litt lengre tekst i banneret under tittelen sånn som det vanligvis kommer til å være når nettsiden er ferdig.
+                  </p>
                   <div class="center">
-                    <a href="#" title="Posttittel" class="btn btn-lrg primary-btn">Read more</a>
+                    <div class="center">
+                      <button class="btn btn-lrg primary-btn">Read more</button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </a>
           <div class="banner">
             <div class="banner-content">
               <img
@@ -236,6 +239,9 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="center">
+          <button id="load-posts-btn" class="btn btn-lrg primary-btn">Load more posts</button>
         </div>
       </section>
     </main>
