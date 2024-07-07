@@ -171,7 +171,6 @@ li::marker {
 .section-title {
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 20px;
 }
 
 .section-content {
@@ -502,11 +501,11 @@ li::marker {
 }
 
 /* TEST START */
-.test-wrapper {
-  position: relative;
+.carousel-controls {
+  user-select: none;
 }
 
-.test-wrapper i {
+.carousel-controls i {
   height: 50px;
   width: 50px;
   background: #fff;
@@ -514,20 +513,13 @@ li::marker {
   line-height: 50px;
   border-radius: 50%;
   cursor: pointer;
-  position: absolute;
-  top: 50%;
   z-index: 2;
   font-size: 1.25rem;
-  transform: translateY(-50%);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.test-wrapper i:first-child {
-  left: -22px;
-}
-
-.test-wrapper i:last-child {
-  right: -22px;
+.carousel-controls i:last-of-type {
+  margin-left: 20px;
 }
 
 .test-wrapper .test-carousel {
@@ -548,7 +540,7 @@ li::marker {
 
 .test-carousel .test-card {
   list-style: none;
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -579,6 +571,12 @@ li::marker {
   font-weight: bold;
   font-size: 20px;
   margin: 20px 0 5px;
+}
+
+.carousel-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .test-carousel.test-dragging {
