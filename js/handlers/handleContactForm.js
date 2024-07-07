@@ -7,6 +7,7 @@ export function handleContactForm() {
 
   sendButton.addEventListener("click", (event) => {
     event.preventDefault();
+    // Test
 
     const name = document.querySelector("#name");
     const email = document.querySelector("#email");
