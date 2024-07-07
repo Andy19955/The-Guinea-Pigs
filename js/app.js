@@ -9,13 +9,16 @@ function router() {
   switch (pathname) {
     case "/":
     case "/index.html":
+    case "/index":
       // Add api call
       carouselControl();
       break;
     case "/blog.html":
+    case "/blog":
       handlePostsDisplay();
       break;
     case "/contact.html":
+    case "/contact":
       handleContactForm();
       break;
   }
