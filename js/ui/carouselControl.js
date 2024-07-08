@@ -1,7 +1,7 @@
 export function carouselControl() {
-  const carousel = document.querySelector(".test-carousel");
+  const carousel = document.querySelector(".carousel-items");
   const arrowBtns = document.querySelectorAll(".carousel-controls i");
-  const firstCardWidth = carousel.querySelector(".test-card").offsetWidth;
+  const firstCardWidth = carousel.querySelector(".carousel-card").offsetWidth;
 
   // let isDragging = false,
   //   startX,
@@ -25,16 +25,14 @@ export function carouselControl() {
   };
 
   arrowBtns.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      // e.stopPropagation();
+    btn.addEventListener("click", () => {
       carousel.scrollLeft += btn.id === "carousel-left" ? -firstCardWidth : firstCardWidth;
-      // carousel.scrollLeft += scrollAmount;
     });
   });
 
   const dragStart = (e) => {
     isDragging = true;
-    carousel.classList.add("test-dragging");
+    carousel.classList.add("dragging");
     startX = e.pageX || e.touches[0].pageX;
     startScrollLeft = carousel.scrollLeft;
   };
@@ -48,7 +46,7 @@ export function carouselControl() {
 
   const dragStop = () => {
     isDragging = false;
-    carousel.classList.remove("test-dragging");
+    carousel.classList.remove("dragging");
   };
 
   // carousel.addEventListener("mousedown", dragStart);

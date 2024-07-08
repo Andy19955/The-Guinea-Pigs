@@ -1,7 +1,7 @@
 import { toggleNavigation } from "./ui/shared/toggleNavbar.js";
+import { handleLatestPostsDisplay } from "./handlers/handleLatestPostsDisplay.js";
 import { handleContactForm } from "./handlers/handleContactForm.js";
 import { handlePostsDisplay } from "./handlers/handlePostsDisplay.js";
-import { carouselControl } from "./ui/carousel.js";
 
 function router() {
   const { pathname } = location;
@@ -10,8 +10,7 @@ function router() {
     case "/":
     case "/index.html":
     case "/index":
-      // Add api call
-      carouselControl();
+      handleLatestPostsDisplay();
       break;
     case "/blog.html":
     case "/blog":
