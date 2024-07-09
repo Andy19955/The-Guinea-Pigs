@@ -1,6 +1,6 @@
 import { fetchFeaturedMedia } from "../../api/fetchFeaturedMedia.js";
 
-export async function createPost(post) {
+export async function createSinglePost(post) {
   const banner = document.createElement("div");
   banner.classList.add("banner");
 

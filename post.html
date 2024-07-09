@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About us - The Guinea Pigs</title>
+    <meta name="description" content="This is a blog about the lifes of two guinea pigs named Nala and Evangeline." />
+    <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/icon" href="/images/favicon.ico" />
+    <script src="./js/app.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/2f7002576b.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="header-navbar">
+        <div class="branding">
+          <a href="/" title="The Guinea Pigs"> The Guinea Pigs </a>
+        </div>
+        <div class="navigation-collapsable" id="navigation-collapsable">
+          <ul class="navigation navigation-horizontal">
+            <li>
+              <a href="/" class="navigation-link">Home</a>
+            </li>
+            <li>
+              <a href="./blog.html" class="navigation-link">Blog</a>
+            </li>
+            <li>
+              <a href="./about.html" class="navigation-link active">About</a>
+            </li>
+            <li>
+              <a href="./contact.html" class="navigation-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div id="toggle-nav-button" class="navigation-toggler">
+          <i class="fa fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="post-hero">
+        <img src="https://projectexam1.andreasthune.no/wp-content/uploads/2024/06/20240624_115613-768x576.jpg" />
+      </section>
+      <section class="section-wrapper">
+        <div id="loading-wrapper"><i class="fa fa-spinner fa-spin"></i> Loading post...</div>
+        <div class="page-title">
+          <h1 class="center" id="post-title"></h1>
+        </div>
+        <div class="page-content">
+          <div class="message-container hidden"></div>
+          <div id="post-container" class="page-content"></div>
+        </div>
+      </section>
+    </main>
+    <footer class="main-footer">&copy; 2024 - The Guinea Pigs</footer>
+  </body>
+</html>
