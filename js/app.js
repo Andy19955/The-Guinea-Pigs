@@ -14,7 +14,7 @@ function router() {
       break;
     case "/blog.html":
     case "/blog":
-      handlePostsDisplay();
+      handlePostsDisplay(1);
       break;
     case "/contact.html":
     case "/contact":

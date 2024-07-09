@@ -73,10 +73,6 @@ li::marker {
   text-align: center;
 }
 
-.hidden {
-  display: none;
-}
-
 .decorated-link {
   font-weight: bold;
 }
@@ -180,6 +176,7 @@ li::marker {
 
 .banner-container {
   gap: 30px;
+  margin-bottom: 30px;
 }
 
 .banner {
@@ -376,6 +373,10 @@ li::marker {
   font-weight: bold;
   font-size: 20px;
   margin: 20px 0 5px;
+}
+
+.hidden {
+  display: none;
 }
 
 /* .carousel-items.dragging {

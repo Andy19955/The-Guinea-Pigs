@@ -1,8 +1,7 @@
 import { postsUrl } from "../constants.js";
 
-export async function fetchPosts(page) {
-  const response = await fetch(`${postsUrl}?page=${page}`);
-
+export async function fetchPosts(page, postsPerPage) {
+  const response = await fetch(`${postsUrl}?page=${page}&per_page=${postsPerPage}`);
   if (response.ok) {
     const results = await response.json();
     return results;
