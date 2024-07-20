@@ -1,56 +1,50 @@
 import { fetchFeaturedMedia } from "../../api/fetchFeaturedMedia.js";
 
 export async function createSinglePost(post) {
-  const banner = document.createElement("div");
-  banner.classList.add("banner");
+  document.title = `${post.title.rendered} | The Guinea Pigs`;
 
-  const bannerContentLeft = document.createElement("div");
-  bannerContentLeft.classList.add("banner-content");
+  const postArticle = document.createElement("article");
 
-  const bannerContentRight = document.createElement("div");
-  bannerContentRight.classList.add("banner-content");
+  const postHeader = document.createElement("div");
+  postHeader.classList.add("post-header");
 
-  // Må sette alt verdier
-  const bannerImage = document.createElement("img");
-  bannerImage.classList.add("banner-img");
+  const postTitle = document.createElement("h1");
+  postTitle.classList.add("post-title");
+  postTitle.innerText = post.title.rendered;
+
+  const postDate = document.createElement("div");
+  postDate.classList.add("post-date");
+
+  const clockIcon = document.createElement("i");
+  clockIcon.classList.add("fa-regular", "fa-clock");
+  const newDate = new Date(post.date);
+  const dateFormatter = new Intl.DateTimeFormat("no-NO", { day: "2-digit", month: "2-digit", year: "numeric" });
+  const postDateFormatted = dateFormatter.format(newDate);
+  const postTime = document.createElement("time");
+  postTime.setAttribute("datetime", post.date);
+  postTime.innerText = postDateFormatted;
+
+  const featuredImage = document.createElement("img");
+  featuredImage.classList.add("post-featured-image");
   if (post.featured_media !== 0) {
     const featuredMedia = await fetchFeaturedMedia(post.featured_media);
-    bannerImage.setAttribute("src", featuredMedia.media_details.sizes.medium_large.source_url); // If no image, set default image using ??
+    featuredImage.setAttribute("src", featuredMedia.source_url); // If no image, set default image using ??
+    featuredImage.setAttribute("alt", featuredMedia.alt_text);
   } else {
-    bannerImage.setAttribute(
+    featuredImage.setAttribute(
       "src",
       "https://images.unsplash.com/photo-1719230693490-786d994f72b2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     );
+    featuredImage.setAttribute("alt", "Image indicating that no image is available.");
   }
 
-  const bannerContentInner = document.createElement("div");
-  bannerContentInner.classList.add("banner-inner", "flex");
+  const postBody = document.createElement("div");
+  postBody.classList.add("post-body", "page-content");
+  postBody.innerHTML = post.content.rendered;
 
-  const bannerTitle = document.createElement("h2");
-  bannerTitle.classList.add("banner-title");
-  bannerTitle.innerText = post.title.rendered;
+  postDate.append(clockIcon, postTime);
+  postHeader.append(postTitle, postDate, featuredImage);
+  postArticle.append(postHeader, postBody);
 
-  const bannerDescription = document.createElement("p");
-  bannerDescription.classList.add("banner-description");
-  bannerDescription.innerHTML = post.excerpt.rendered;
-
-  const centerDiv = document.createElement("div");
-  centerDiv.classList.add("center");
-
-  const bannerButton = document.createElement("button");
-  bannerButton.classList.add("btn", "btn-lrg", "primary-btn");
-  bannerButton.innerText = "Read more";
-
-  const linkWrapper = document.createElement("a");
-  linkWrapper.setAttribute("href", `/post.html?id=${post.id}`);
-  linkWrapper.setAttribute("title", post.title.rendered);
-
-  bannerContentLeft.append(bannerImage);
-  centerDiv.append(bannerButton);
-  bannerContentInner.append(bannerTitle, bannerDescription, centerDiv);
-  bannerContentRight.append(bannerContentInner);
-  banner.append(bannerContentLeft, bannerContentRight);
-  linkWrapper.append(banner);
-
-  return linkWrapper;
+  return postArticle;
 }
