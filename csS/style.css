@@ -542,7 +542,7 @@ li::marker {
 }
 
 @media screen and (max-width: 767px) {
-  .s-hero {
+  .section-hero {
     font-size: 20px;
     text-align: center;
   }
@@ -553,7 +553,7 @@ li::marker {
 }
 
 @media screen and (max-width: 544px) {
-  .s-hero {
+  .section-hero {
     font-size: 18px;
   }
 
