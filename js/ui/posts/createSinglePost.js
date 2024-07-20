@@ -24,26 +24,26 @@ export async function createSinglePost(post) {
   postTime.setAttribute("datetime", post.date);
   postTime.innerText = postDateFormatted;
 
-  const featuredImage = document.createElement("img");
-  featuredImage.classList.add("post-featured-image");
-  if (post.featured_media !== 0) {
-    const featuredMedia = await fetchFeaturedMedia(post.featured_media);
-    featuredImage.setAttribute("src", featuredMedia.source_url); // If no image, set default image using ??
-    featuredImage.setAttribute("alt", featuredMedia.alt_text);
-  } else {
-    featuredImage.setAttribute(
-      "src",
-      "https://images.unsplash.com/photo-1719230693490-786d994f72b2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    );
-    featuredImage.setAttribute("alt", "Image indicating that no image is available.");
-  }
+  // const featuredImage = document.createElement("img");
+  // featuredImage.classList.add("post-featured-image");
+  // if (post.featured_media !== 0) {
+  //   const featuredMedia = await fetchFeaturedMedia(post.featured_media);
+  //   featuredImage.setAttribute("src", featuredMedia.source_url); // If no image, set default image using ??
+  //   featuredImage.setAttribute("alt", featuredMedia.alt_text);
+  // } else {
+  //   featuredImage.setAttribute(
+  //     "src",
+  //     "https://images.unsplash.com/photo-1719230693490-786d994f72b2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  //   );
+  //   featuredImage.setAttribute("alt", "Image indicating that no image is available.");
+  // }
 
   const postBody = document.createElement("div");
   postBody.classList.add("post-body", "page-content");
   postBody.innerHTML = post.content.rendered;
 
   postDate.append(clockIcon, postTime);
-  postHeader.append(postTitle, postDate, featuredImage);
+  postHeader.append(postTitle, postDate);
   postArticle.append(postHeader, postBody);
 
   return postArticle;
