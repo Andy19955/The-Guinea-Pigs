@@ -50,7 +50,7 @@
             <i id="carousel-right" class="fa fa-solid fa-angle-right"></i>
           </div>
         </div>
-        <div class="message-container"></div>
+        <div id="message-container-carousel" class="message-container"></div>
         <div class="carousel">
           <ul class="carousel-items">
             <li class="carousel-card">
@@ -91,16 +91,17 @@
           </div>
         </div>
       </section>
-      <section class="section-wrapper">
-        <div class="section-content">
-          <h2 class="section-title">Newsletter</h2>
-          <p>Subscribe to receive information about our newest and freshest posts directly to your e-mail!</p>
-          <form id="subscribe-newsletter">
+      <section class="section-wrapper-full">
+        <div class="page-content center">
+          <h2 class="section-title">Never miss a new post</h2>
+          <p>Subscribe to our newsletters and receive a notification directly to your e-mail when our newest and freshest posts are published!</p>
+          <form id="subscribeNewsletter">
             <div class="form-group flex">
               <label for="email">Your e-mail</label>
-              <input type="email" class="form-input" placeholder="john@doe.com" required />
+              <input type="email" id="email" class="form-input" placeholder="Your e-mail address" required />
+              <div id="message-container-newsletter" class="message-container"></div>
             </div>
-            <button type="submit" class="btn btn-lrg primary-btn">Subscribe</button>
+            <button type="submit" id="send-btn" class="btn btn-lrg primary-btn">Subscribe for free</button>
           </form>
         </div>
       </section>
