@@ -12,7 +12,7 @@ export async function handlePostsDisplay(page) {
     postCount = posts.length;
     displayPosts(posts);
   } catch (error) {
-    displayMessage(".message-container", `Oops, something didn't work as we planned. Error: ${error.message}`, "error");
+    displayMessage("#message-container-posts", `Oops, something didn't work as we planned. Error: ${error.message}`, "error");
   } finally {
     loadingElement.classList.add("hidden");
     if (postCount < postsPerPage) {

@@ -16,7 +16,7 @@ export function handleContactForm() {
     if (checkLength(name.value, 5) === true) {
       name.classList.remove("error");
     } else {
-      displayMessage(".message-container", "The name must be minimum 6 characters long", "error");
+      displayMessage("#message-container-contact", "The name must be minimum 6 characters long", "error");
       name.classList.add("error");
       return;
     }
@@ -24,7 +24,7 @@ export function handleContactForm() {
     if (validateEmail(email.value)) {
       email.classList.remove("error");
     } else {
-      displayMessage(".message-container", "The e-mail must be a valid e-mail address.", "error");
+      displayMessage("#message-container-contact", "The e-mail must be a valid e-mail address.", "error");
       email.classList.add("error");
       return;
     }
@@ -32,7 +32,7 @@ export function handleContactForm() {
     if (checkLength(subject.value, 15) === true) {
       subject.classList.remove("error");
     } else {
-      displayMessage(".message-container", "The subject must be minimum 16 characters long", "error");
+      displayMessage("#message-container-contact", "The subject must be minimum 16 characters long", "error");
       subject.classList.add("error");
       return;
     }
@@ -40,12 +40,12 @@ export function handleContactForm() {
     if (checkLength(message.value, 25) === true) {
       message.classList.remove("error");
     } else {
-      displayMessage(".message-container", "The message must be minimum 26 characters long", "error");
+      displayMessage("#message-container-contact", "The message must be minimum 26 characters long", "error");
       message.classList.add("error");
       return;
     }
 
-    displayMessage(".message-container", "Thank you for the message! We will respond as soon as possible.", "success");
+    displayMessage("#message-container-contact", "Thank you for the message! We will respond as soon as possible.", "success");
 
     name.value = "";
     email.value = "";

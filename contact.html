@@ -6,9 +6,9 @@
     <title>Contact us - The Guinea Pigs</title>
     <meta name="description" content="Send us a message if you have any questions or just want to get in touch with us." />
     <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet" />
-    <link href="./css/style.css" rel="stylesheet" />
+    <link href="/css/style.css" rel="stylesheet" />
     <link rel="shortcut icon" type="image/icon" href="/images/favicon.ico" />
-    <script src="./js/app.js" type="module"></script>
+    <script src="/js/app.js" type="module"></script>
     <script src="https://kit.fontawesome.com/2f7002576b.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -43,20 +43,21 @@
         <div class="page-content">
           <h1 class="section-title">Contact us</h1>
           <p>
-            Do you have any questions for us or just want to get in touch? We would love to hear from you! Fill in the form below, hit that "Send"-button and we will respond as soon as possible after
-            we are done eating and napping!
+            Do you have any questions for us (or our humans) or just want to get in touch? We would love to hear from you! Fill in the form below, hit that "Send"-button and we will respond as soon as
+            possible after we are done eating and napping!
           </p>
+          <p>~ Nala and Evangeline</p>
           <form>
             <div class="form-group flex">
               <div>
                 <label for="name">Your name</label>
                 <small>(min. 6 characters)</small>
               </div>
-              <input type="text" class="form-input" id="name" name="name" placeholder="John Doe" required />
+              <input type="text" class="form-input" id="name" name="name" placeholder="Your name" required />
             </div>
             <div class="form-group flex">
               <label for="email">Your e-mail</label>
-              <input type="email" class="form-input" id="email" name="email" placeholder="john@doe.com" required />
+              <input type="email" class="form-input" id="email" name="email" placeholder="Your e-mail address" required />
             </div>
             <div class="form-group flex">
               <div>
@@ -72,7 +73,7 @@
               </div>
               <textarea id="message" class="form-input" rows="10" placeholder="Can you please add more information about where you are buying the equipment for the guinea pigs?" required></textarea>
             </div>
-            <div class="message-container"></div>
+            <div id="message-container-contact" class="message-container"></div>
             <div class="center">
               <button type="submit" id="send-btn" class="btn btn-lrg primary-btn">Send message</button>
             </div>
