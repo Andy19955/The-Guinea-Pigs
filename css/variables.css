@@ -1,0 +1,15 @@
+:root {
+  --grey-lgtr: #f2f2f2;
+  --grey-lgt: #bbb;
+  --grey-drk: #777;
+  --grey-drkr: #232323;
+  --white: #fff;
+  --black: #000;
+  --primary-lgt: #fcba70;
+  --primary-drk: #f7a64a;
+  --secondary-lgt: #eee7d2;
+  --error-bd: #ff0000;
+  --error-bg: #ffc0cb;
+  --success-bd: #00ff00;
+  --success-bg: #90ee90;
+}
