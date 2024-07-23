@@ -10,7 +10,7 @@ export async function createSinglePost(post) {
 
   const postTitle = document.createElement("h1");
   postTitle.classList.add("post-title");
-  postTitle.innerText = post.title.rendered;
+  postTitle.innerHTML = post.title.rendered;
 
   const postDate = document.createElement("div");
   postDate.classList.add("post-date");
@@ -22,7 +22,7 @@ export async function createSinglePost(post) {
   const postDateFormatted = dateFormatter.format(newDate);
   const postTime = document.createElement("time");
   postTime.setAttribute("datetime", post.date);
-  postTime.innerHTML = postDateFormatted;
+  postTime.innerText = postDateFormatted;
 
   const postBody = document.createElement("div");
   postBody.classList.add("post-body", "page-content");
