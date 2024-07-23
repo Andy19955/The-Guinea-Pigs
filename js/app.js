@@ -3,6 +3,7 @@ import { handleLatestPostsDisplay } from "./handlers/handleLatestPostsDisplay.js
 import { handleContactForm } from "./handlers/handleContactForm.js";
 import { handlePostsDisplay } from "./handlers/handlePostsDisplay.js";
 import { handleSinglePostDisplay } from "./handlers/handleSinglePostDisplay.js";
+import { handleSubscriptionForm } from "./handlers/handleSubscriptionForm.js";
 
 function router() {
   const { pathname } = location;
@@ -12,6 +13,7 @@ function router() {
     case "/index.html":
     case "/index":
       handleLatestPostsDisplay();
+      handleSubscriptionForm();
       break;
     case "/blog.html":
     case "/blog":
