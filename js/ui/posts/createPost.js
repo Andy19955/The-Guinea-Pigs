@@ -26,7 +26,7 @@ export async function createPost(post) {
 
   const bannerTitle = document.createElement("h2");
   bannerTitle.classList.add("banner-title");
-  bannerTitle.innerText = post.title.rendered;
+  bannerTitle.innerHTML = post.title.rendered;
 
   const bannerDescription = document.createElement("p");
   bannerDescription.classList.add("banner-description");

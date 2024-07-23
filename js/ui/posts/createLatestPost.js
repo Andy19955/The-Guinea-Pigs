@@ -26,7 +26,7 @@ export async function createLatestPost(post) {
 
   const carouselCardTitle = document.createElement("h3");
   carouselCardTitle.classList.add("carousel-card-title");
-  carouselCardTitle.innerText = post.title.rendered;
+  carouselCardTitle.innerHTML = post.title.rendered;
 
   carouselCardImageWrapper.append(carouselCardImage);
   carouselCardContainer.append(carouselCardImageWrapper, carouselCardTitle);

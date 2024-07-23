@@ -22,7 +22,7 @@ export async function createSinglePost(post) {
   const postDateFormatted = dateFormatter.format(newDate);
   const postTime = document.createElement("time");
   postTime.setAttribute("datetime", post.date);
-  postTime.innerText = postDateFormatted;
+  postTime.innerHTML = postDateFormatted;
 
   const postBody = document.createElement("div");
   postBody.classList.add("post-body", "page-content");
