@@ -40,11 +40,26 @@
     </header>
     <main>
       <section class="section-wrapper">
-        <div class="page-title">
-          <h1 class="center">Blog</h1>
-        </div>
-        <div id="loading-wrapper"><i class="fa fa-spinner fa-spin"></i> Loading posts...</div>
+        <h1 class="section-title">All posts</h1>
         <div class="message-container"></div>
+        <div id="loading-wrapper">
+          <div class="banner-container flex">
+            <div class="banner">
+              <div class="banner-content">
+                <div class="banner-img skeleton"></div>
+              </div>
+              <div class="banner-content">
+                <div class="banner-inner flex">
+                  <div class="banner-title skeleton skeleton-text skeleton-text-short"></div>
+                  <div class="banner-description skeleton skeleton-text"></div>
+                  <div class="banner-description skeleton skeleton-text"></div>
+                  <div class="banner-description skeleton skeleton-text"></div>
+                  <div class="banner-description skeleton skeleton-text"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div id="post-container" class="banner-container flex"></div>
         <div class="center">
           <button id="load-posts-btn" class="btn btn-lrg primary-btn">Load more posts</button>

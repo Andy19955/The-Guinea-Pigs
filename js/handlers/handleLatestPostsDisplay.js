@@ -10,6 +10,6 @@ export async function handleLatestPostsDisplay() {
   } catch (error) {
     displayMessage(".message-container", `Oops, something didn't work as we planned. Error: ${error.message}`, "error");
   } finally {
-    loadingElement.classList.add("hidden");
+    // loadingElement.classList.add("hidden");
   }
 }

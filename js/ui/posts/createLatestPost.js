@@ -14,19 +14,18 @@ export async function createLatestPost(post) {
   const carouselCardImageWrapper = document.createElement("div");
   carouselCardImageWrapper.classList.add("carousel-card-image");
 
-  // Må sette alt verdier
   const carouselCardImage = document.createElement("img");
   if (post.featured_media !== 0) {
     const featuredMedia = await fetchFeaturedMedia(post.featured_media);
-    carouselCardImage.setAttribute("src", featuredMedia.media_details.sizes.medium_large.source_url); // If no image, set default image using ??
+    carouselCardImage.setAttribute("src", featuredMedia.media_details.sizes.medium_large.source_url);
+    carouselCardImage.setAttribute("alt", featuredMedia.alt_text);
   } else {
-    carouselCardImage.setAttribute(
-      "src",
-      "https://images.unsplash.com/photo-1719230693490-786d994f72b2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    );
+    carouselCardImage.setAttribute("src", "/images/no-image-found.jpg");
+    carouselCardImage.setAttribute("alt", "Two guinea pigs on a pillow with text: Oops, we didn't find a picture...");
   }
 
   const carouselCardTitle = document.createElement("h3");
+  carouselCardTitle.classList.add("carousel-card-title");
   carouselCardTitle.innerText = post.title.rendered;
 
   carouselCardImageWrapper.append(carouselCardImage);
