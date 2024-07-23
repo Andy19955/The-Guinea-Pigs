@@ -156,7 +156,7 @@ li::marker {
   max-width: 1280px;
   margin: 0 auto;
   padding: 30px;
-  background-color: #eee7d2;
+  background-color: var(--secondary-lgt);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   margin-bottom: 30px;
