@@ -13,6 +13,7 @@ export function createImageModal(image) {
   const modalImage = document.createElement("img");
   modalImage.classList.add("modal-image");
   modalImage.setAttribute("src", image.src);
+  modalImage.setAttribute("alt", image.alt);
 
   closeModal.append(closeIcon);
   modalContent.append(modalImage);
