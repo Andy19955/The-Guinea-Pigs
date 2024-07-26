@@ -73,10 +73,6 @@ li::marker {
   text-align: center;
 }
 
-.decorated-link {
-  font-weight: bold;
-}
-
 .decorated-link:hover {
   text-decoration: underline;
 }
@@ -126,10 +122,14 @@ li::marker {
 }
 
 .main-footer {
+  margin-top: 50px;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
   background-color: var(--grey-drkr);
   color: var(--white);
   text-align: center;
-  padding: 10px;
 }
 
 .section-hero {
@@ -159,7 +159,6 @@ li::marker {
   background-color: var(--secondary-lgt);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  margin-bottom: 30px;
 }
 
 .page-content {
