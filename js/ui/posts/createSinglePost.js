@@ -25,7 +25,7 @@ export async function createSinglePost(post) {
   postTime.innerText = postDateFormatted;
 
   const postBody = document.createElement("div");
-  postBody.classList.add("post-body", "page-content");
+  postBody.classList.add("post-body", "flex-v");
   postBody.innerHTML = post.content.rendered;
 
   const main = document.querySelector("main");
