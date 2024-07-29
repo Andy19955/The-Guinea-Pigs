@@ -2,7 +2,7 @@ import { fetchFeaturedMedia } from "../../api/fetchFeaturedMedia.js";
 
 export async function createPost(post) {
   const banner = document.createElement("div");
-  banner.classList.add("banner");
+  banner.classList.add("banner", "flex-h");
 
   const bannerContentLeft = document.createElement("div");
   bannerContentLeft.classList.add("banner-content");
@@ -22,7 +22,7 @@ export async function createPost(post) {
   }
 
   const bannerContentInner = document.createElement("div");
-  bannerContentInner.classList.add("banner-inner", "flex");
+  bannerContentInner.classList.add("banner-inner", "flex-v");
 
   const bannerTitle = document.createElement("h2");
   bannerTitle.classList.add("banner-title");
