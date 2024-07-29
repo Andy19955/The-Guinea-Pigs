@@ -447,6 +447,10 @@ li::marker {
   text-align: center;
 }
 
+.list li {
+  margin-bottom: 8px;
+}
+
 .post-hero {
   width: 100%;
   height: 400px;
