@@ -49,7 +49,7 @@ ul {
 }
 
 li::marker {
-  color: var(--grey-drkr);
+  color: var(--primary-drk);
 }
 
 .flex-h,
