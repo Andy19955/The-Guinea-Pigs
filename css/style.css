@@ -311,7 +311,7 @@ li::marker {
   align-items: center;
 }
 
-.carousel-controls {
+/* .carousel-controls {
   user-select: none;
 }
 
@@ -336,7 +336,7 @@ li::marker {
 .carousel-controls i.inactive {
   opacity: 0.3;
   cursor: default;
-}
+} */
 
 .carousel {
   position: relative;
@@ -353,6 +353,7 @@ li::marker {
   line-height: 50px;
   border: none;
   border-radius: 50%;
+  user-select: none;
   cursor: pointer;
   font-size: 20px;
   z-index: 2;
