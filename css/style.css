@@ -135,6 +135,11 @@ li::marker {
   text-align: center;
 }
 
+.footer-links {
+  gap: 12px;
+  justify-content: center;
+}
+
 .section-hero {
   height: 500px;
   padding: 15px;
@@ -712,5 +717,13 @@ li::marker {
     cursor: zoom-in;
     object-fit: cover;
     object-position: center;
+  }
+
+  .main-footer {
+    flex-direction: column;
+  }
+
+  .footer-decoration {
+    display: none;
   }
 }
