@@ -1,11 +1,7 @@
 export function carouselControl() {
   const carousel = document.querySelector(".carousel-items");
-  const arrowBtns = document.querySelectorAll(".carousel-controls i");
+  const arrowBtns = document.querySelectorAll(".carousel-control");
   const firstCardWidth = carousel.querySelector(".carousel-card").offsetWidth;
-
-  // let isDragging = false,
-  //   startX,
-  //   startScrollLeft;
 
   const updateButtonStates = () => {
     const maxScrollLeft = carousel.scrollWidth - carousel.offsetWidth;
@@ -29,33 +25,6 @@ export function carouselControl() {
       carousel.scrollLeft += btn.id === "carousel-left" ? -firstCardWidth : firstCardWidth;
     });
   });
-
-  const dragStart = (e) => {
-    isDragging = true;
-    carousel.classList.add("dragging");
-    startX = e.pageX || e.touches[0].pageX;
-    startScrollLeft = carousel.scrollLeft;
-  };
-
-  const dragging = (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX || e.touches[0].pageX;
-    carousel.scrollLeft = startScrollLeft - (x - startX);
-  };
-
-  const dragStop = () => {
-    isDragging = false;
-    carousel.classList.remove("dragging");
-  };
-
-  // carousel.addEventListener("mousedown", dragStart);
-  // carousel.addEventListener("mousemove", dragging);
-  // carousel.addEventListener("mouseup", dragStop);
-  // carousel.addEventListener("mouseleave", dragStop);
-  // carousel.addEventListener("touchstart", dragStart);
-  // carousel.addEventListener("touchmove", dragging);
-  // carousel.addEventListener("touchend", dragStop);
 
   carousel.addEventListener("scroll", updateButtonStates);
 

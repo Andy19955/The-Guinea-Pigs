@@ -45,13 +45,16 @@
       <section class="section-wrapper flex-v">
         <div class="carousel-top">
           <h2 class="section-title">Latest posts</h2>
-          <div class="carousel-controls">
-            <i id="carousel-left" class="fa fa-solid fa-angle-left"></i>
-            <i id="carousel-right" class="fa fa-solid fa-angle-right"></i>
-          </div>
+          <!-- <div class="carousel-controls">
+            <i id="carouselsef-left" class="fa fa-solid fa-angle-left"></i>
+            <i id="carouselsef-right" class="fa fa-solid fa-angle-right"></i>
+          </div> -->
         </div>
-        <div id="message-container-carousel" class="message-container"></div>
+        <div id="message-container-carousel" class="message-container hidden"></div>
         <div class="carousel">
+          <button id="carousel-left" class="carousel-control carousel-control-left">
+            <i class="fa fa-solid fa-angle-left"></i>
+          </button>
           <ul class="carousel-items">
             <li class="carousel-card">
               <div class="carousel-card-container">
@@ -72,6 +75,9 @@
               </div>
             </li>
           </ul>
+          <button id="carousel-right" class="carousel-control carousel-control-right">
+            <i class="fa fa-solid fa-angle-right"></i>
+          </button>
         </div>
       </section>
       <section class="section-wrapper">
