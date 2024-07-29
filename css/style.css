@@ -61,12 +61,6 @@ li::marker {
   flex-direction: column;
 }
 
-.row {
-  flex-direction: row;
-  gap: 30px;
-  align-items: center;
-}
-
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
