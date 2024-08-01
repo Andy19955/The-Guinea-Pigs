@@ -10,7 +10,7 @@ export async function handlePostsDisplay(page) {
   try {
     const posts = await fetchPosts(page, postsPerPage);
     postCount = posts.length;
-    displayPosts(posts);
+    await displayPosts(posts);
   } catch (error) {
     displayMessage("#message-container-posts", `Oops, something didn't work as we planned. Error: ${error.message}`, "error");
   } finally {
