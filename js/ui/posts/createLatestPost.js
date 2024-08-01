@@ -16,9 +16,13 @@ export async function createLatestPost(post) {
 
   const carouselCardImage = document.createElement("img");
   if (post.featured_media !== 0) {
-    const featuredMedia = await fetchFeaturedMedia(post.featured_media);
-    carouselCardImage.setAttribute("src", featuredMedia.media_details.sizes.medium_large.source_url);
-    carouselCardImage.setAttribute("alt", featuredMedia.alt_text);
+    try {
+      const featuredMedia = await fetchFeaturedMedia(post.featured_media);
+      carouselCardImage.setAttribute("src", featuredMedia.media_details.sizes.medium_large.source_url);
+      carouselCardImage.setAttribute("alt", featuredMedia.alt_text);
+    } catch (error) {
+      displayMessage("#message-container-carousel", `Oops, something didn't work as we planned. Error: ${error.message}`, "error");
+    }
   } else {
     carouselCardImage.setAttribute("src", "/images/no-image-found.jpg");
     carouselCardImage.setAttribute("alt", "Two guinea pigs on a pillow with text: Oops, we didn't find a picture...");
