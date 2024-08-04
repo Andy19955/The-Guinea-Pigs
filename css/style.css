@@ -306,33 +306,6 @@ li::marker {
   align-items: center;
 }
 
-/* .carousel-controls {
-  user-select: none;
-}
-
-.carousel-controls i {
-  height: 50px;
-  width: 50px;
-  background: var(--white);
-  text-align: center;
-  line-height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 20px;
-  margin-left: 20px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-
-.carousel-controls i:hover {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
-  background-color: rgba(255, 255, 255, 0.75);
-}
-
-.carousel-controls i.inactive {
-  opacity: 0.3;
-  cursor: default;
-} */
-
 .carousel {
   position: relative;
 }
@@ -698,13 +671,6 @@ li::marker {
   .page-content img {
     max-height: 300px;
   }
-
-  /* .carousel-controls i {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    margin-left: 5px;
-  } */
 
   .post-body figure img {
     width: 100%;
