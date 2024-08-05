@@ -18,7 +18,7 @@ export async function createPost(post) {
     bannerImage.setAttribute("alt", featuredMedia.alt_text);
   } else {
     bannerImage.setAttribute("src", "/images/no-image-found.jpg");
-    bannerImage.setAttribute("alt", "Two guinea pigs on a pillow with text: Oops, we didn't find a picture...");
+    bannerImage.setAttribute("alt", "Two guinea pigs on a pillow.");
   }
 
   const bannerContentInner = document.createElement("div");

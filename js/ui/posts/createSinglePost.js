@@ -39,7 +39,7 @@ export async function createSinglePost(post) {
     featuredImage.setAttribute("alt", featuredMedia.alt_text);
   } else {
     featuredImage.setAttribute("src", "/images/no-image-found.jpg");
-    featuredImage.setAttribute("alt", "Two guinea pigs on a pillow with text: Oops, we didn't find a picture...");
+    featuredImage.setAttribute("alt", "Two guinea pigs on a pillow.");
   }
   postHero.append(featuredImage);
   main.prepend(postHero);

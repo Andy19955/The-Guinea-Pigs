@@ -21,7 +21,7 @@ export async function createLatestPost(post) {
     carouselCardImage.setAttribute("alt", featuredMedia.alt_text);
   } else {
     carouselCardImage.setAttribute("src", "/images/no-image-found.jpg");
-    carouselCardImage.setAttribute("alt", "Two guinea pigs on a pillow with text: Oops, we didn't find a picture...");
+    carouselCardImage.setAttribute("alt", "Two guinea pigs on a pillow.");
   }
 
   const carouselCardTitle = document.createElement("h3");
