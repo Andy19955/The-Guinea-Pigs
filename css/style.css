@@ -408,7 +408,7 @@ li::marker {
   padding: 10px;
   position: absolute;
   z-index: 1;
-  bottom: 10px;
+  bottom: 25px;
   background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
   width: 100%;
@@ -525,10 +525,21 @@ li::marker {
   max-width: 90%;
   max-height: 90%;
   cursor: default;
+  animation-name: zoom;
+  animation-duration: 0.3s;
 }
 
 .skeleton {
   animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes skeleton-loading {
