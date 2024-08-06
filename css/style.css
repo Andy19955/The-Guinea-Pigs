@@ -479,6 +479,7 @@ li::marker {
 
 .post-body figure img {
   width: 100%;
+  max-height: 600px;
   cursor: zoom-in;
   object-fit: cover;
   object-position: center;
