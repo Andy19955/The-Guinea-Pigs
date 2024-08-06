@@ -98,6 +98,11 @@ li::marker {
   list-style-type: none;
 }
 
+.navigation-collapsable {
+  z-index: 3;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
 .navigation .active,
 .navigation .navigation-link:hover {
   color: var(--white);
@@ -488,7 +493,7 @@ li::marker {
 
 .modal {
   position: fixed;
-  z-index: 1;
+  z-index: 4;
   left: 0;
   top: 0;
   width: 100%;
