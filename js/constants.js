@@ -1,2 +1,3 @@
-export const postsUrl = "https://cors.noroff.dev/https://projectexam1.andreasthune.no/wp-json/wp/v2/posts/";
-export const mediaUrl = "https://cors.noroff.dev/https://projectexam1.andreasthune.no/wp-json/wp/v2/media/";
+const baseUrl = "https://projectexam1.andreasthune.no/wp-json/wp/v2/";
+export const postsUrl = `${baseUrl}posts/`;
+export const mediaUrl = `${baseUrl}media/`;
