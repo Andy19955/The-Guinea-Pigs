@@ -10,11 +10,11 @@ export async function handlePostsDisplay(page) {
   try {
     const posts = await fetchPosts(page, postsPerPage);
     postCount = posts.length;
+    loadingElement.classList.add("hidden");
     await displayPosts(posts);
   } catch (error) {
     displayMessage("#message-container-posts", `Oops, something didn't work as we planned. Error: ${error.message}`, "error");
   } finally {
-    loadingElement.classList.add("hidden");
     if (postCount < postsPerPage) {
       loadMore.classList.add("hidden");
     } else {
