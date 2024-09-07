@@ -1,5 +1,3 @@
-import { fetchFeaturedMedia } from "../../api/fetchFeaturedMedia.js";
-
 export async function createSinglePost(post) {
   document.title = `${post.title.rendered} | The Guinea Pigs`;
 
@@ -34,9 +32,8 @@ export async function createSinglePost(post) {
 
   const featuredImage = document.createElement("img");
   if (post.featured_media !== 0) {
-    const featuredMedia = await fetchFeaturedMedia(post.featured_media);
-    featuredImage.setAttribute("src", featuredMedia.source_url);
-    featuredImage.setAttribute("alt", featuredMedia.alt_text);
+    featuredImage.setAttribute("src", post._embedded["wp:featuredmedia"][0].source_url);
+    featuredImage.setAttribute("alt", post._embedded["wp:featuredmedia"][0].alt_text);
   } else {
     featuredImage.setAttribute("src", "/images/no-image-found.jpg");
     featuredImage.setAttribute("alt", "Two guinea pigs on a pillow.");

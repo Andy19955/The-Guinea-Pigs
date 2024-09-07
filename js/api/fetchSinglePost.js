@@ -1,7 +1,7 @@
 import { postsUrl } from "../constants.js";
 
 export async function fetchSinglePost(id) {
-  const response = await fetch(postsUrl + id);
+  const response = await fetch(`${postsUrl}${id}?_embed`);
 
   if (response.ok) {
     const results = await response.json();

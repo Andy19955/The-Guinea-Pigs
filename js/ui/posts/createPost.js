@@ -1,5 +1,3 @@
-import { fetchFeaturedMedia } from "../../api/fetchFeaturedMedia.js";
-
 export async function createPost(post) {
   const banner = document.createElement("div");
   banner.classList.add("banner", "flex-h");
@@ -13,9 +11,8 @@ export async function createPost(post) {
   const bannerImage = document.createElement("img");
   bannerImage.classList.add("banner-img");
   if (post.featured_media !== 0) {
-    const featuredMedia = await fetchFeaturedMedia(post.featured_media);
-    bannerImage.setAttribute("src", featuredMedia.source_url);
-    bannerImage.setAttribute("alt", featuredMedia.alt_text);
+    bannerImage.setAttribute("src", post._embedded["wp:featuredmedia"][0].source_url);
+    bannerImage.setAttribute("alt", post._embedded["wp:featuredmedia"][0].alt_text);
   } else {
     bannerImage.setAttribute("src", "/images/no-image-found.jpg");
     bannerImage.setAttribute("alt", "Two guinea pigs on a pillow.");

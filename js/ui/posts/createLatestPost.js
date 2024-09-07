@@ -1,5 +1,3 @@
-import { fetchFeaturedMedia } from "../../api/fetchFeaturedMedia.js";
-
 export async function createLatestPost(post) {
   const carouselCard = document.createElement("li");
   carouselCard.classList.add("carousel-card");
@@ -16,9 +14,8 @@ export async function createLatestPost(post) {
 
   const carouselCardImage = document.createElement("img");
   if (post.featured_media !== 0) {
-    const featuredMedia = await fetchFeaturedMedia(post.featured_media);
-    carouselCardImage.setAttribute("src", featuredMedia.media_details.sizes.medium_large.source_url);
-    carouselCardImage.setAttribute("alt", featuredMedia.alt_text);
+    carouselCardImage.setAttribute("src", post._embedded["wp:featuredmedia"][0].source_url);
+    carouselCardImage.setAttribute("alt", post._embedded["wp:featuredmedia"][0].alt_text);
   } else {
     carouselCardImage.setAttribute("src", "/images/no-image-found.jpg");
     carouselCardImage.setAttribute("alt", "Two guinea pigs on a pillow.");
