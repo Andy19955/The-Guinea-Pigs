@@ -704,4 +704,9 @@ li::marker {
   .footer-decoration {
     display: none;
   }
+
+  .close-modal {
+    font-size: 25px;
+    right: 10px;
+  }
 }
