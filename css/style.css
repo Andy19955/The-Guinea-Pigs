@@ -373,6 +373,10 @@ li::marker {
   display: none;
 }
 
+.carousel-link {
+  width: 100%;
+}
+
 .carousel-card {
   list-style: none;
   border-radius: 10px;

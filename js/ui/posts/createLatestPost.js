@@ -3,6 +3,7 @@ export async function createLatestPost(post) {
   carouselCard.classList.add("carousel-card");
 
   const linkWrapper = document.createElement("a");
+  linkWrapper.classList.add("carousel-link");
   linkWrapper.setAttribute("href", `/post.html?id=${post.id}`);
   linkWrapper.setAttribute("title", post.title.rendered);
 
@@ -27,8 +28,13 @@ export async function createLatestPost(post) {
 
   carouselCardImageWrapper.append(carouselCardImage);
   carouselCardContainer.append(carouselCardImageWrapper, carouselCardTitle);
-  carouselCard.append(carouselCardContainer);
-  linkWrapper.append(carouselCard);
+  // carouselCard.append(carouselCardContainer);
+  // linkWrapper.append(carouselCard);
 
-  return linkWrapper;
+  linkWrapper.append(carouselCardContainer);
+  carouselCard.append(linkWrapper);
+
+  // return linkWrapper;
+
+  return carouselCard;
 }
