@@ -1,6 +1,6 @@
 # The Guinea Pigs
 
-![image](https://github.com/Andy19955/The-Guinea-Pigs/blob/master/the-guinea-pigs.jpg)
+![image](https://github.com/Andy19955/The-Guinea-Pigs/blob/master/images/the-guinea-pigs.jpg)
 
 ## Description
 
